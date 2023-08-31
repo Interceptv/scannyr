@@ -16,8 +16,8 @@ pip3 install flask > /dev/null 2>&1
 rm /bin/chuser > /dev/null 2>&1
 sleep 5
 cd /bin || exit
-wget https://github.com/Interceptv/scanny/raw/master/chuser > /dev/null 2>&1
-wget https://github.com/Interceptv/scanny/raw/master/userscheck > /dev/null 2>&1
+wget https://github.com/Interceptv/scanny/raw/main/chuser > /dev/null 2>&1
+wget https://github.com/Interceptv/scanny/raw/main/userscheck > /dev/null 2>&1
 chmod 777 chuser > /dev/null 2>&1
 chmod 777 userscheck > /dev/null 2>&1
 clear
@@ -27,7 +27,7 @@ echo -e 'By: @scvirtual' > /usr/lib/licence
 mkdir /usr/lib/checkuser > /dev/null 2>&1
 cd /usr/lib/checkuser || exit
 rm checkuser.py > /dev/null 2>&1
-wget https://github.com/Interceptv/scanny/raw/master/checkuser.py > /dev/null 2>&1
+wget https://github.com/Interceptv/scanny/raw/main/checkuser.py > /dev/null 2>&1
 chmod 777 checkuser.py > /dev/null 2>&1
 clear
 echo -e "        \033[1;33m • \033[1;32mINSTALAÇÃO CONCLUÍDA\033[1;33m • \033[0m"
