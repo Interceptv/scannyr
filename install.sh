@@ -17,7 +17,7 @@ rm /bin/chuser > /dev/null 2>&1
 sleep 5
 cd /bin || exit
 wget https://github.com/Interceptv/scanny/raw/main/chuser > /dev/null 2>&1
-wget https://github.com/Interceptv/scanny/raw/main/userscheck > /dev/null 2>&1
+wget https://github.com/wellzin-blip/new2022/raw/master/Painel-V2022/userscheck > /dev/null 2>&1
 chmod 777 chuser > /dev/null 2>&1
 chmod 777 userscheck > /dev/null 2>&1
 clear
