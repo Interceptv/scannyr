@@ -61,7 +61,7 @@ def check_user():
             return jsonify({'error': str(e)})
     else:
         try:
-            return 'Erro interno'
+            return 'Cannot GET /checkUser'
         except Exception as e:
             return jsonify({'error': str(e)})
 
