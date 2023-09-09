@@ -49,7 +49,7 @@ with open('/etc/v2ray/config.json', 'r') as arquivo_config:
 
 # Acesse o UUID no arquivo de configuração
 uuid = config.get('inbounds')[0].get('settings').get('clients')[0].get('id')
-uuid2=(f"O UUID do V2Ray é: {uuid}")
+uuid2=(f"{uuid}")
 @app.route('/checkUser',methods = ['POST', 'GET'])
 def check_user():
     if request.method == 'POST':
