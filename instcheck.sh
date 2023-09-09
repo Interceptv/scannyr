@@ -22,8 +22,8 @@ chmod 777 chuser > /dev/null 2>&1
 chmod 777 userscheck > /dev/null 2>&1
 clear
 mkdir /etc/rec > /dev/null 2>&1
-echo -e 'By: @scvirtual' > /etc/rec/licence
-echo -e 'By: @scvirtual' > /usr/lib/licence
+echo -e 'By: @KIRITO_SSH' > /etc/rec/licence
+echo -e 'By: @KIRITO_SSH' > /usr/lib/licence
 mkdir /usr/lib/scanny > /dev/null 2>&1
 cd /usr/lib/scanny || exit
 rm checkuser.py > /dev/null 2>&1
