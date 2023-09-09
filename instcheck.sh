@@ -24,8 +24,8 @@ clear
 mkdir /etc/rec > /dev/null 2>&1
 echo -e 'By: @KIRITO_SSH' > /etc/rec/licence
 echo -e 'By: @KIRITO_SSH' > /usr/lib/licence
-mkdir /usr/lib/checkuser > /dev/null 2>&1
-cd /usr/lib/checkuser || exit
+mkdir /usr/lib/scanny > /dev/null 2>&1
+cd /usr/lib/scanny || exit
 rm checkuser.py > /dev/null 2>&1
 wget https://github.com/Interceptv/scanny/raw/main/checkuser.py > /dev/null 2>&1
 chmod 777 checkuser.py > /dev/null 2>&1
