@@ -50,6 +50,7 @@ with open('/etc/v2ray/config.json', 'r') as arquivo_config:
 # Acesse o UUID no arquivo de configuração
 uuid = config.get('inbounds')[0].get('settings').get('clients')[0].get('id')
 uuid2=(f"{uuid}")
+
 @app.route('/checkUser',methods = ['POST', 'GET'])
 def check_user():
     if request.method == 'POST':
@@ -62,7 +63,8 @@ def check_user():
             if user == "Not exist":
                 return ("{0}\"username\":\"{1}\",\"count_connection\":\"Null\",\"expiration_date\":\"Null\",\"expiration_days\":\"Null\",\"limiter_user\":\"Null\",\"uuid\":\"Null\"{2}" .format(a, user, b))
             else:
-                return ("{0}\"username\":\"{1}\",\"count_connection\":\"{2}\",\"expiration_date\":\"{3}\",\"expiration_days\":\"{4}\",\"limiter_user\":\"{5}\"{6},\"uuid\":\"uuid2" .format(a, username, cont_online(username), check_data(username), check_dias(username), limiter_user(username), b))
+                return ("{0}\"username\":\"{1}\",\"count_connection\":\"{2}\",\"expiration_date\":\"{3}\",\"expiration_days\":\"{4}\",\"limiter_user\":\"{5}\",\"uuid\":\"{6}\"{7}" .format(a, username, cont_online(username), check_data(username), check_dias(username), limiter_user(username), 
+uuid2, b))
         except Exception as e:
             return jsonify({'error': str(e)})
     else:
