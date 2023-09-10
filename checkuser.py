@@ -43,13 +43,22 @@ def check_dias(username: str) -> t.Optional[str]:
     result = os.popen(command).readlines()
     final = result[0].strip()
     return final
+    
+diretorio = '/etc/v2ray/config.json'  # Substitua pelo caminho correto do arquivo JSON
 
-with open('/etc/v2ray/config.json', 'r') as arquivo_config:
-    config = json.load(arquivo_config)
+# Verifique se o arquivo JSON existe
+if os.path.exists(diretorio):
+    with open(diretorio, 'r') as arquivo_config:
+        config = json.load(arquivo_config)
 
-# Acesse o UUID no arquivo de configuração
-uuid = config.get('inbounds')[0].get('settings').get('clients')[0].get('id')
-uuid2=(f"{uuid}")
+    # Acesse o UUID no arquivo de configuração
+    try:
+        uuid = config.get('inbounds')[0].get('settings').get('clients')[0].get('id')
+        uuid2=(f"{uuid}")
+    except (KeyError, IndexError):
+        uuid2=("null")
+else:
+    uuid2=("null")
 
 @app.route('/checkUser',methods = ['POST', 'GET'])
 def check_user():
