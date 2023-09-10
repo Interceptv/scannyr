@@ -26,9 +26,9 @@ echo -e 'By: @KIRITO_SSH' > /etc/rec/licence
 echo -e 'By: @KIRITO_SSH' > /usr/lib/licence
 mkdir /usr/lib/scanny > /dev/null 2>&1
 cd /usr/lib/scanny || exit
-rm scanny > /dev/null 2>&1
-wget https://github.com/Interceptv/scanny/raw/main/scanny > /dev/null 2>&1
-chmod 777 scanny > /dev/null 2>&1
+rm scanny.py > /dev/null 2>&1
+wget https://github.com/Interceptv/scanny/raw/main/scanny.py > /dev/null 2>&1
+chmod 777 scanny.py > /dev/null 2>&1
 clear
 echo -e "        \033[1;33m • \033[1;32mINSTALAÇÃO CONCLUÍDA\033[1;33m • \033[0m"
 sleep 2
