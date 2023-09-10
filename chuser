@@ -99,12 +99,12 @@ echo -e "\033[1;37m━━━━━━━━━━━━━━━━━━━━�
 				verif_ptrs $porta
 				fun_inisocks() {
 					sleep 1
-					screen -dmS checkuser python3 /usr/lib/scanny/checkuser.py $porta;
+					screen -dmS checkuser python3 /usr/lib/checkuser/checkuser.py $porta;
 					[[ $(grep -wc "checkuser" /etc/autostart) = '0' ]] && {
-						echo -e "netstat -tlpn | grep -w $porta > /dev/null || {  screen -r -S 'checkuser' -X quit;  screen -dmS checkuser python3 /usr/lib/scanny/checkuser.py $porta; }" >>/etc/autostart
+						echo -e "netstat -tlpn | grep -w $porta > /dev/null || {  screen -r -S 'checkuser' -X quit;  screen -dmS checkuser python3 /usr/lib/checkuser/checkuser.py $porta; }" >>/etc/autostart
 					} || {
-						sed -i '/scanny/d' /etc/autostart
-						echo -e "netstat -tlpn | grep -w $porta > /dev/null || {  screen -r -S 'checkuser' -X quit;  screen -dmS checkuser python3 /usr/lib/scanny/checkuser.py $porta; }" >>/etc/autostart
+						sed -i '/checkuser/d' /etc/autostart
+						echo -e "netstat -tlpn | grep -w $porta > /dev/null || {  screen -r -S 'checkuser' -X quit;  screen -dmS checkuser python3 /usr/lib/checkuser/checkuser.py $porta; }" >>/etc/autostart
 					}
 				}
 				echo ""
