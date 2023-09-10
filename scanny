@@ -62,7 +62,7 @@ echo -e "\033[1;37m━━━━━━━━━━━━━━━━━━━━�
     echo -ne "\033[1;32mO QUE DESEJA FAZER \033[1;33m?\033[1;37m "
     read resposta
     if [[ "$resposta" = '1' ]]; then
-	if ps x | grep -w scanny.py | grep -v grep 1>/dev/null 2>/dev/null; then
+	if ps x | grep -w checkuser.py | grep -v grep 1>/dev/null 2>/dev/null; then
 				clear
 				echo -e "\E[41;1;37m             CHECKUSER              \E[0m"
 				echo ""
@@ -70,8 +70,8 @@ echo -e "\033[1;37m━━━━━━━━━━━━━━━━━━━━�
 					for pidcheckuser in $(screen -ls | grep ".checkuser" | awk {'print $1'}); do
 						screen -r -S "$pidcheckuser" -X quit
 					done
-					[[ $(grep -wc "scanny.py" /etc/autostart) != '0' ]] && {
-						sed -i '/scanny.py/d' /etc/autostart
+					[[ $(grep -wc "checkuser.py" /etc/autostart) != '0' ]] && {
+						sed -i '/checkuser.py/d' /etc/autostart
 					}
 					sleep 1
 					screen -wipe >/dev/null
@@ -99,12 +99,12 @@ echo -e "\033[1;37m━━━━━━━━━━━━━━━━━━━━�
 				verif_ptrs $porta
 				fun_inisocks() {
 					sleep 1
-					screen -dmS checkuser python3 /usr/lib/scanny/scanny.py $porta;
+					screen -dmS checkuser python3 /usr/lib/scanny/checkuser.py $porta;
 					[[ $(grep -wc "checkuser" /etc/autostart) = '0' ]] && {
-						echo -e "netstat -tlpn | grep -w $porta > /dev/null || {  screen -r -S 'checkuser' -X quit;  screen -dmS checkuser python3 /usr/lib/scanny/scanny.py $porta; }" >>/etc/autostart
+						echo -e "netstat -tlpn | grep -w $porta > /dev/null || {  screen -r -S 'checkuser' -X quit;  screen -dmS checkuser python3 /usr/lib/scanny/checkuser.py $porta; }" >>/etc/autostart
 					} || {
 						sed -i '/scanny/d' /etc/autostart
-						echo -e "netstat -tlpn | grep -w $porta > /dev/null || {  screen -r -S 'checkuser' -X quit;  screen -dmS checkuser python3 /usr/lib/scanny/scanny.py $porta; }" >>/etc/autostart
+						echo -e "netstat -tlpn | grep -w $porta > /dev/null || {  screen -r -S 'checkuser' -X quit;  screen -dmS checkuser python3 /usr/lib/scanny/checkuser.py $porta; }" >>/etc/autostart
 					}
 				}
 				echo ""
