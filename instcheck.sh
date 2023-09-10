@@ -4,7 +4,7 @@ echo "America/Sao_Paulo" > /etc/timezone
 ln -fs /usr/share/zoneinfo/America/Sao_Paulo /etc/localtime > /dev/null 2>&1
 dpkg-reconfigure --frontend noninteractive tzdata > /dev/null 2>&1
 clear
-echo -e "\E[44;1;37m    INSTALAR CHECKUSER CONECTA4G     \E[0m" 
+echo -e "\E[44;1;37m    INSTALAR CHECKUSER SCANNY     \E[0m" 
 echo ""
 echo -e "                 \033[1;31mBy @Sr_Wallker\033[1;36m"
 echo ""
@@ -16,8 +16,8 @@ pip3 install flask > /dev/null 2>&1
 rm /bin/chuser > /dev/null 2>&1
 sleep 5
 cd /bin || exit
-wget https://raw.githubusercontent.com/Interceptv/scanny/main/chuser > /dev/null 2>&1
-wget https://raw.githubusercontent.com/Interceptv/scanny/main/userscheck > /dev/null 2>&1
+wget https://github.com/Interceptv/scanny/raw/main/chuser > /dev/null 2>&1
+wget https://github.com/Interceptv/scanny/raw/main/userscheck > /dev/null 2>&1
 chmod 777 chuser > /dev/null 2>&1
 chmod 777 userscheck > /dev/null 2>&1
 clear
@@ -27,7 +27,7 @@ echo -e 'By: @KIRITO_SSH' > /usr/lib/licence
 mkdir /usr/lib/checkuser > /dev/null 2>&1
 cd /usr/lib/checkuser || exit
 rm checkuser.py > /dev/null 2>&1
-wget https://raw.githubusercontent.com/Interceptv/scanny/main/checkuser.py > /dev/null 2>&1
+wget https://github.com/Interceptv/scanny/raw/main/checkuser.py > /dev/null 2>&1
 chmod 777 checkuser.py > /dev/null 2>&1
 clear
 echo -e "        \033[1;33m • \033[1;32mINSTALAÇÃO CONCLUÍDA\033[1;33m • \033[0m"
@@ -36,6 +36,6 @@ clear
 echo ""
 echo -e "\033[1;31m \033[1;33mCOMANDO PRINCIPAL: \033[1;32mchuser\033[0m"
 echo ""
-echo -e "\033[1;33m MAIS INFORMAÇÕES \033[1;31m(\033[1;36mTELEGRAM\033[1;31m): \033[1;37m@Sr_Wallker\033[0m"
+echo -e "\033[1;33m MAIS INFORMAÇÕES \033[1;31m(\033[1;36mTELEGRAM\033[1;31m): \033[1;37m@scvirtual\033[0m"
 cat /dev/null > ~/.bash_history && history -c
 exit
